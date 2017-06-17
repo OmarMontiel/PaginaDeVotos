@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+  <body >
+    <header >
+      <div class="container">
+        <h3><div class="row-top">
+            <div class="main">
+                <div class="wrapper">
+
+
+                      <nav>
+                          <ul class="menu">
+                              <li><a  href="Vista.html" target="_blank">Inicio</a></li>
+                              <li><a href="GraficaBarra.html" target="_blank">Grafica De Barra</a></li>
+                              <li><a href="GraficaPastel.html"target="_blank">Grafica De Pastel</a></li>
+                              <li><a href="">Tabla de Tados General</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div></h3>
+      </div>
+
+    </header>
+    <section >
+      <br>
+
+      <div class="row container   ">
+
+        <div class="col-md-3">
+          <img src="../Imagenes/pri.jpg" alt="" class="img-rounded img-responsive" >
+          <br>
+          <button type="button" class="btn btn-primary" id="btnpri" onclick="f_pri()">Voto PRI</button>
+          <p>Clifcks <span id="clicks">0</span></p>
+          <br>
+        </div>
+
+        <div class="col-md-3">
+          <img src="../Imagenes/pan.png" alt="" class="img-rounded img-responsive" >
+          <br>
+          <button type="button" class="btn btn-primary" id="btnpan" onclick="f_pan()">Voto PAN</button>
+          <br>
+        </div>
+
+        <div class="col-md-3">
+          <img src="../Imagenes/prd.jpg" alt="" class="img-rounded img-responsive" >
+          <br>
+          <button type="button" class="btn btn-primary" id="btnprd" onclick="f_prd()">Voto PRD</button>
+          <br>
+        </div>
+
+        <div class="col-md-3">
+          <img src="../Imagenes/nulo.jpg" alt="" class="img-rounded img-responsive" >
+          <br>
+          <button type="button" class="btn btn-primary"id="btnnulo"onclick="f_nulo()" >Voto Nulo</button>
+          <br>
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+      <p id="parrafo">j</p>
+    <script type="text/javascript" src="../Contorlador/vista.js"></script>
+  </body>
+</html>
