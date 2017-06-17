@@ -4,32 +4,28 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Pastel.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-   <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
-
-    <script type="text/javascript" src="../Contorlador/Pastel.js"></script>
-    <script type="text/javascript" src="../Contorlador/Barra.js"></script>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/Pastel.css" type="text/css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
   </head>
-  <body>
-    <header>
+  <body >
+    <header >
       <div class="container">
         <h3><div class="row-top">
             <div class="main">
                 <div class="wrapper">
+
+
                       <nav>
                           <ul class="menu">
-                              <li><a  href="Vista.html">Inicio</a></li>
-                              <li><a href="GraficaBarra.html">Grafica De Barra</a></li>
-                              <li><a href="GraficaPastel.html">Grafica De Pastel</a></li>
+                              <li><a  href="Vista.html" target="_blank">Inicio</a></li>
+                              <li><a href="GraficaBarra.html" target="_blank">Grafica De Barra</a></li>
+                              <li><a href="GraficaPastel.html"target="_blank">Grafica De Pastel</a></li>
                               <li><a href="General.html">Tabla de Tados General</a></li>
                           </ul>
                       </nav>
@@ -39,7 +35,40 @@
       </div>
 
     </header>
-    <div id="container"></div>
+  
+    <br>
+
+    <div id="container">
+
+      <table id="chartData">
+
+        <tr>
+          <th>Partido</th><th>Voto </th>
+         </tr>
+
+        <tr style="color: #0DA068">
+          <td>PRI</td><td>1</td>
+        </tr>
+
+        <tr style="color: #194E9C">
+          <td>PAN</td><td>13</td>
+        </tr>
+
+        <tr style="color: #ED9C13">
+          <td>PRD</td><td>71</td>
+        </tr>
+
+        <tr style="color: #ED5713">
+          <td>Nulo</td><td>32</td>
+        </tr>
+      </table>
+
+
+
+    </div>
+
+
+
 
 
   </body>
