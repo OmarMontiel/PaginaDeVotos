@@ -1,36 +1,20 @@
-var chart = Highcharts.chart('container', {
-
-    title: {
-        text: 'Chart.update'
-    },
-
-    subtitle: {
-        text: 'Plain'
-    },
-
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
-
-    series: [{
-        type: 'column',
-        colorByPoint: true,
-        data: [29.9, 71.5, 1.4, 0.2, 144.0, 176.0, 135.6, 148.5, 5.4, 194.1, 95.6, 54.4],
-        showInLegend: false
-    }]
-
-
-});
-
-
-$('#plain').click(function () {
-    chart.update({
-        chart: {
-            inverted: false,
-            polar: false
-        },
-        subtitle: {
-            text: 'Plain'
-        }
-    });
-});
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(dibujarGrafico);
+function dibujarGrafico() {
+  // Tabla de datos: valores y etiquetas de la gráfica
+  var data = google.visualization.arrayToDataTable([
+    ['Texto', ' '],
+    ['PRI', 20.21],
+    ['PAN', 4.28],
+    ['PRD', 17.26],
+    ['NULO', 10.25]
+  ]);
+  var options = {
+    title: '    Grafica De Barra'
+  }
+  // Dibujar el gráfico
+  new google.visualization.ColumnChart(
+  //ColumnChart sería el tipo de gráfico a dibujar
+    document.getElementById('GraficoGoogleChart-ejemplo-1')
+  ).draw(data, options);
+}
