@@ -20,17 +20,14 @@
 	}
 
 
-
-
 	function f_pri(){
-		$query = "SELECT N_votos FROM votos WHERE ID=1 ";
-		$result = mysql_query($query,$connection) or die('Error en la consulta: ' . mysql_error());
+		$query = "SELECT N_votos FROM votos WHERE  ID=1 ";
+		$result = mysql_query($query) or die('Error en la consulta: ' . mysql_error());
 		$row = mysql_fetch_array($result);
 		$votosPRI = $row['N_votos'];
 		$votosPRI = $votosPRI + 1;
 		$query = "UPDATE votos SET N_votos='$votosPRI' WHERE ID=1";
 		$result = mysql_query($query) or die('Error en la consulta: ' . mysql_error());
-
 	}
 
   function f_pan(){
