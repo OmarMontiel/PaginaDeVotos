@@ -4,7 +4,7 @@
 	$user = "root";
 	$pass = "";
 	$database = "sistemasdevoto";
-	$q = $_GET['q'];
+
 
 
 	$connection = mysql_connect($host, $user, $pass) or die('Error en la conexion: ' . mysql_error());
@@ -12,15 +12,7 @@
 
 
 // Insercion de votos
-	if($q == "nulo"){
-		f_nulo();
-	}elseif ($q == "pan") {
-		f_pan();
-	}elseif ($q == "pri") {
-		f_pri();
-	}elseif ($q == "prd") {
-		f_prd();
-	}
+	
 
 
 
