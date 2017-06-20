@@ -1,4 +1,5 @@
 var voto = " ";
+
 function f_nulo(){
         voto = "nulo";
         var xmlhttp = new XMLHttpRequest();

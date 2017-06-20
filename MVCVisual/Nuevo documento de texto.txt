@@ -30,3 +30,66 @@ function dibujarGrafico() {
     document.getElementById('GraficaDeBarra')
   ).draw(data, options);
 }
+
+
+  var datos = $.ajax({
+          url:'datosgrafica.php',
+          type:'post',
+          dataType:'json',
+          async:false
+        }).responseText;
+  datos = JSON.parse(datos)
+  console.log(datos)
+
+  var pri = datos[0];
+  var pan = datos[1];
+  var prd = datos[2];
+  var nulo = datos[3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        var data = google.visualization.arrayToDataTable([
+          ['Texto', ' '],
+          ['PRI', myObj[0],
+          ['PAN', 5],
+          ['PRD', 5],
+          ['NULO',5]
+        ]);
+        var options = {
+          title: '    Grafica De Barra'
+        }
+        alert(pri);
+        // Dibujar el gráfico
+        new google.visualization.ColumnChart(
+        //ColumnChart sería el tipo de gráfico a dibujar
+          document.getElementById('GraficaDeBarra')
+        ).draw(data, options);
+      };
+
+    }
+};
+xmlhttp.open("GET", "../Modelo/BaseDatos.php?q=0", true);
+xmlhttp.send();

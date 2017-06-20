@@ -10,7 +10,6 @@
 	$connection = mysql_connect($host, $user, $pass) or die('Error en la conexion: ' . mysql_error());
 	mysql_select_db($database) or die('Error en conexion db: ' . mysql_error());
 
-
 // Insercion de votos
 	if($q == "nulo"){
 		f_nulo();
@@ -20,6 +19,10 @@
 		f_pri();
 	}elseif ($q == "prd") {
 		f_prd();
+	}elseif ($q ==0) {
+		$cantidadDeVotos=array(VotosPRI(),VotosPan(),VotosPRD(),VotosNULO());
+		$EnvioDeDatos = json_encode($cantidadDeVotos);
+		echo $EnvioDeDatos;
 	}
 
 
@@ -65,11 +68,13 @@
 	}
 
 	function VotosPRI(){
-		$query = "SELECT N_votos FROM votos WHERE  ID=1 ";
+		$query = "SELECT * FROM votos WHERE  ID=1 ";
 		$result = mysql_query($query) or die('Error en la consulta: ' . mysql_error());
 		$row = mysql_fetch_array($result);
 		$votosPRI = $row['N_votos'];
-		return $votosPRI;
+		$pri=$row['Nombre'];
+		return $votosPRI ;
+		
 
 	}
 	function VotosPan(){
@@ -85,6 +90,7 @@
 		$result = mysql_query($query) or die('Error en la consulta: ' . mysql_error());
 		$row = mysql_fetch_array($result);
 		$votosPRD = $row['N_votos'];
+
 		return $votosPRD;
 	}
 	function VotosNULO(){
@@ -94,21 +100,6 @@
 		$votosNulo = $row['N_votos'];
 		return $votosNulo;
 	}
-
-
-	$cantidadDeVotos=array(VotosPRI(),VotosPan(),VotosPRD(),VotosNULO());
-	$myJSON = json_encode($cantidadDeVotos);
-	echo $myJSON;
-
-
-
-
-
-
-
-
-
-
 
 	// fin de consulta de datos
 
